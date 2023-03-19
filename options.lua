@@ -4,9 +4,33 @@ return {
     -- set to true or false etc.
     relativenumber = true, -- sets vim.opt.relativenumber
     number = true, -- sets vim.opt.number
-    spell = false, -- sets vim.opt.spell
+    spell = true, -- sets vim.opt.spell
     signcolumn = "auto", -- sets vim.opt.signcolumn to auto
     wrap = false, -- sets vim.opt.wrap
+    listchars = {
+      space = "₋",
+      eol = "⤶",
+      trail = "~",
+      extends = ">",
+      precedes = "<",
+      tab = "->",
+    },
+    list = true,
+
+    foldmethod = "expr",
+    foldexpr = "nvim_treesitter#foldexpr()",
+    fillchars = {
+      vert = "│",
+      fold = "░",
+      diff = " ",
+      msgsep = "‾",
+      foldopen = "▾",
+      foldsep = "│",
+      foldclose = "▸",
+    },
+    foldlevel = 99,
+    guifont = { "SauceCodePro Nerd Font", "h12" },
+    timeoutlen = 40
   },
   g = {
     mapleader = " ", -- sets vim.g.mapleader
@@ -17,6 +41,9 @@ return {
     icons_enabled = true, -- disable icons in the UI (disable if no nerd font is available, requires :PackerSync after changing)
     ui_notifications_enabled = true, -- disable notifications when toggling UI elements
   },
+  o = {
+    background = "dark"
+  }
 }
 -- If you need more control, you can use the function()...end notation
 -- return function(local_vim)

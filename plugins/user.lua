@@ -9,4 +9,14 @@ return {
   --     require("lsp_signature").setup()
   --   end,
   -- },
+  {
+    "Almo7aya/gruvbox.nvim",
+    config = function()
+      require("gruvbox").setup({
+        dim_inactive = true,
+        inverse = false,
+      })
+    end,
+  },
+
 }
