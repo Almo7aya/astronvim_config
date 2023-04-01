@@ -29,7 +29,17 @@ return {
     ["<S-k>"] = {
       function() require("astronvim.utils.buffer").nav(vim.v.count > 0 and vim.v.count or 1) end,
       desc = "Next buffer",
-    }
+    },
+    ["<Leader>gm"] = { "<cmd>OpenInGHRepo <cr>", desc = "Open repository in GitHub" },
+    ["<Leader>gf"] = { "<cmd>OpenInGHFile <cr>", desc = "Open file in GitHub" },
+    -- copy whole file content
+    ["<Leader>aa"] = { ":silent :%y+ <CR>", desc = "Copy whole buffer content" },
+    ["q"] = { ":noh <cr>", desc = "Disable micro recording thing" }
+
+
+  },
+  v = {
+    ["<Leader>gf"] = { "<cmd>OpenInGHFile <cr>", desc = "Open file in GitHub" },
   },
   t = {
     -- setting a mapping to false will disable it

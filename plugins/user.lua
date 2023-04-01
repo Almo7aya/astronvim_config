@@ -18,5 +18,8 @@ return {
       })
     end,
   },
-
+  {
+    "Almo7aya/openingh.nvim",
+    event = "User AstroFile",
+  }
 }
