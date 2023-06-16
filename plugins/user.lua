@@ -21,5 +21,8 @@ return {
   {
     "Almo7aya/openingh.nvim",
     event = "User AstroFile",
+  },
+  {
+    "simrat39/rust-tools.nvim",
   }
 }
