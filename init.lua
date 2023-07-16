@@ -90,8 +90,6 @@ return {
       end,
       prettierd = function()
       end,
-      eslint = function()
-      end,
     },
   },
   -- Configure require("lazy").setup() options

@@ -10,27 +10,27 @@ return {
     config.sources = {
       -- Set a formatter
       -- null_ls.builtins.formatting.stylua,
-      null_ls.builtins.code_actions.eslint.with {
-        condition = function(utils)
-          return utils.root_has_file ".eslintrc.yml"
-              or utils.root_has_file ".eslintrc.json"
-              or utils.root_has_file ".eslintrc.js"
-        end,
-      },
-      null_ls.builtins.formatting.eslint.with {
-        condition = function(utils)
-          return utils.root_has_file ".eslintrc.yml"
-              or utils.root_has_file ".eslintrc.json"
-              or utils.root_has_file ".eslintrc.js"
-        end,
-      },
-      null_ls.builtins.diagnostics.eslint.with {
-        condition = function(utils)
-          return utils.root_has_file ".eslintrc.yml"
-              or utils.root_has_file ".eslintrc.json"
-              or utils.root_has_file ".eslintrc.js"
-        end,
-      },
+      -- null_ls.builtins.code_actions.eslint.with {
+      --   condition = function(utils)
+      --     return utils.root_has_file ".eslintrc.yml"
+      --         or utils.root_has_file ".eslintrc.json"
+      --         or utils.root_has_file ".eslintrc.js"
+      --   end,
+      -- },
+      -- null_ls.builtins.formatting.eslint.with {
+      --   condition = function(utils)
+      --     return utils.root_has_file ".eslintrc.yml"
+      --         or utils.root_has_file ".eslintrc.json"
+      --         or utils.root_has_file ".eslintrc.js"
+      --   end,
+      -- },
+      -- null_ls.builtins.diagnostics.eslint.with {
+      --   condition = function(utils)
+      --     return utils.root_has_file ".eslintrc.yml"
+      --         or utils.root_has_file ".eslintrc.json"
+      --         or utils.root_has_file ".eslintrc.js"
+      --   end,
+      -- },
     }
     return config -- return final config table
   end,
