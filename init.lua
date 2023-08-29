@@ -4,7 +4,7 @@ return {
     remote = "origin", -- remote to use
     channel = "nightly", -- "stable" or "nightly"
     version = "latest", -- "latest", tag name, or regex search like "v1.*" to only do updates before v2 (STABLE ONLY)
-    branch = "main", -- branch name (NIGHTLY ONLY)
+    branch = "nightly", -- branch name (NIGHTLY ONLY)
     commit = nil, -- commit hash (NIGHTLY ONLY)
     pin_plugins = nil, -- nil, true, false (nil will pin plugins on stable only)
     skip_prompts = false, -- skip prompts about breaking changes
@@ -27,6 +27,15 @@ return {
   },
 
   lsp = {
+    mappings = {
+      n = {
+        K = false,
+        H = {
+          function() vim.lsp.buf.hover() end,
+          desc = "Hover symbol details",
+        },
+      },
+    },
     -- customize lsp formatting options
     formatting = {
       -- control auto formatting on save
@@ -42,8 +51,9 @@ return {
       disabled = { -- disable formatting capabilities for the listed language servers
         -- disable lua_ls formatting capability if you want to use StyLua to format your lua code
         -- "lua_ls",
+        -- "tsserver",
       },
-      timeout_ms = 1000, -- default format timeout
+      timeout_ms = 5000, -- default format timeout
       -- filter = function(client) -- fully override the default formatting function
       --   return true
       -- end
@@ -51,6 +61,36 @@ return {
     -- enable servers that you already have installed without mason
     servers = {
       -- "pyright"
+    },
+
+    config = {
+      tsserver = {
+        init_options = {
+          preferences = {
+            disableSuggestions = true,
+          },
+        },
+      },
+      cssls = function(options)
+        options.settings = {
+          css = { validate = true, lint = {
+            unknownAtRules = "ignore",
+          } },
+          scss = { validate = true, lint = {
+            unknownAtRules = "ignore",
+          } },
+          less = { validate = true, lint = {
+            unknownAtRules = "ignore",
+          } },
+        }
+        return options
+      end,
+      tailwindcss = {
+        root_dir = function(fname)
+          local util = require "lspconfig.util"
+          return util.root_pattern("tailwind.config.js", "tailwind.config.ts")(fname)
+        end,
+      },
     },
   },
 

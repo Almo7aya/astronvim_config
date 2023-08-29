@@ -34,12 +34,33 @@ return {
     ["<Leader>gf"] = { "<cmd>OpenInGHFile <cr>", desc = "Open file in GitHub" },
     -- copy whole file content
     ["<Leader>aa"] = { ":silent :%y+ <CR>", desc = "Copy whole buffer content" },
-    ["q"] = { ":noh <cr>", desc = "Disable micro recording thing" }
+    ["q"] = { ":noh <cr>", desc = "Disable micro recording thing" },
 
-
+    -- resize with arrows
+    ["<A-k>"] = { ":resize -2<CR>" },
+    ["<A-j>"] = { ":resize +2<CR>" },
+    ["<A-h>"] = { ":vertical resize -2<CR>" },
+    ["<A-l>"] = { ":vertical resize +2<CR>" },
+    -- don't yank text on cut ( x )
+    ["x"] = { '"_x' },
+  },
+  i = {
+    -- Move current line / block with Alt-j/k ala vscode.
+    ["<A-j>"] = { "<Esc>:m .+1<CR>==gi" },
+    -- Move current line / block with Alt-j/k ala vscode.
+    ["<A-k>"] = { "<Esc>:m .-2<CR>==gi" },
   },
   v = {
     ["<Leader>gf"] = { "<cmd>OpenInGHFile <cr>", desc = "Open file in GitHub" },
+    -- don't yank text on cut ( x )
+    ["x"] = { '"_x' },
+    -- don't copy the replaced text after pasting in visual mode
+    ["p"] = { '"_dP' },
+    -- Better indenting
+    ["<"] = { "<gv" },
+    [">"] = { ">gv" },
+    ["<A-j>"] = { ":m '>+1<CR>gv-gv" },
+    ["<A-k>"] = { ":m '<-2<CR>gv-gv" },
   },
   t = {
     -- setting a mapping to false will disable it

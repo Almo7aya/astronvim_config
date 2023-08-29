@@ -66,9 +66,9 @@ return {
   {
     "folke/which-key.nvim",
     config = function(plugin, opts)
-      opts.show_help = false;
-      opts.show_keys = false;
-      require "plugins.configs.which-key" (plugin, opts) -- include the default astronvim config that calls the setup call
+      opts.show_help = false
+      opts.show_keys = false
+      require "plugins.configs.which-key"(plugin, opts) -- include the default astronvim config that calls the setup call
       -- Add bindings which show up as group name
       -- local wk = require "which-key"
       -- wk.register({
@@ -79,22 +79,24 @@ return {
   {
     "lewis6991/gitsigns.nvim",
     opts = function(_, opts)
-      opts.current_line_blame = true;
+      opts.current_line_blame = true
+      opts.yadm = {
+        enable = true,
+      }
       return opts
     end,
   },
   {
     "nvim-neo-tree/neo-tree.nvim",
     opts = function(_, opts)
-      opts.close_if_last_window = true;
+      opts.close_if_last_window = true
       opts.filesystem.filtered_items = {
         hide_dotfiles = false,
         hide_gitignored = false,
-      };
-      opts.window.mappings["<S-j>"] = "prev_source";
-      opts.window.mappings["<S-k>"] = "next_source";
+      }
+      opts.window.mappings["<S-j>"] = "prev_source"
+      opts.window.mappings["<S-k>"] = "next_source"
       return opts
     end,
-  }
-
+  },
 }

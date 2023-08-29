@@ -30,7 +30,8 @@ return {
     },
     foldlevel = 99,
     guifont = { "SauceCodePro Nerd Font", "h12" },
-    timeoutlen = 40
+    timeoutlen = 40,
+    swapfile = false
   },
   g = {
     mapleader = " ", -- sets vim.g.mapleader
