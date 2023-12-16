@@ -18,6 +18,10 @@ return {
   { import = "astrocommunity.pack.markdown" },
   { import = "astrocommunity.pack.html-css" },
   { import = "astrocommunity.pack.yaml" },
+  { import = "astrocommunity.pack.godot" },
+  { import = "astrocommunity.pack.cpp" },
+  { import = "astrocommunity.pack.go" },
+  { import = "astrocommunity.pack.dart" },
 
   { import = "astrocommunity.diagnostics.trouble-nvim" },
 
