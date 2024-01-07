@@ -64,27 +64,27 @@ return {
     },
 
     config = {
-      tsserver = {
-        init_options = {
-          preferences = {
-            disableSuggestions = true,
-          },
-        },
-      },
-      cssls = function(options)
-        options.settings = {
-          css = { validate = true, lint = {
-            unknownAtRules = "ignore",
-          } },
-          scss = { validate = true, lint = {
-            unknownAtRules = "ignore",
-          } },
-          less = { validate = true, lint = {
-            unknownAtRules = "ignore",
-          } },
-        }
-        return options
-      end,
+      -- tsserver = {
+      --   init_options = {
+      --     preferences = {
+      --       disableSuggestions = true,
+      --     },
+      --   },
+      -- },
+      -- cssls = function(options)
+      --   options.settings = {
+      --     css = { validate = true, lint = {
+      --       unknownAtRules = "ignore",
+      --     } },
+      --     scss = { validate = true, lint = {
+      --       unknownAtRules = "ignore",
+      --     } },
+      --     less = { validate = true, lint = {
+      --       unknownAtRules = "ignore",
+      --     } },
+      --   }
+      --   return options
+      -- end,
       tailwindcss = {
         root_dir = function(fname)
           local util = require "lspconfig.util"

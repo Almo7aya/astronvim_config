@@ -14,22 +14,22 @@ return {
   { import = "astrocommunity.pack.json" },
   { import = "astrocommunity.pack.docker" },
   { import = "astrocommunity.pack.bash" },
-  { import = "astrocommunity.pack.angular" },
-  { import = "astrocommunity.pack.markdown" },
+  -- { import = "astrocommunity.pack.angular" },
+  -- { import = "astrocommunity.pack.markdown" },
   { import = "astrocommunity.pack.html-css" },
   { import = "astrocommunity.pack.yaml" },
-  { import = "astrocommunity.pack.godot" },
-  { import = "astrocommunity.pack.cpp" },
-  { import = "astrocommunity.pack.go" },
-  { import = "astrocommunity.pack.dart" },
+  -- { import = "astrocommunity.pack.godot" },
+  -- { import = "astrocommunity.pack.cpp" },
+  -- { import = "astrocommunity.pack.go" },
+  -- { import = "astrocommunity.pack.dart" },
 
-  { import = "astrocommunity.diagnostics.trouble-nvim" },
+  -- { import = "astrocommunity.diagnostics.trouble-nvim" },
 
-  { import = "astrocommunity.utility.nvim-toggler" },
+  -- { import = "astrocommunity.utility.nvim-toggler" },
 
-  { import = "astrocommunity.git.octo-nvim" },
+  -- { import = "astrocommunity.git.octo-nvim" },
 
-  { import = "astrocommunity.color.ccc-nvim" },
+  -- { import = "astrocommunity.color.ccc-nvim" },
 
-  { import = "astrocommunity.markdown-and-latex.peek-nvim" },
+  -- { import = "astrocommunity.markdown-and-latex.peek-nvim" },
 }
